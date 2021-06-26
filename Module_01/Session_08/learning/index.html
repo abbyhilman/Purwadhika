@@ -1,0 +1,267 @@
+<!-- Mendefinisikan versi html yang digunakan, saat ini menggunakan HTML 5 -->
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Menyimpan informasi tambahan mengenai halaman website -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning HTML</title>
+    <script src="./index.js"></script>
+
+    <style>
+      table,
+      td,
+      th {
+        border: 2px solid black;
+        border-collapse: collapse;
+        padding: 10px 30px;
+        font-size: 1.5em;
+      }
+      body {
+        font-size: 1.2em;
+      }
+
+      select option {
+        font-size: 1.2em;
+      }
+
+      select {
+        height: 30px;
+      }
+
+      label {
+        display: inline-block;
+        width: 120px;
+        padding-right: 10px;
+      }
+
+      input[type="button"] {
+        width: 350px;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <!-- Tempat untuk konten dari website (p, img, table) -->
+  <body>
+    <!-- <h1 style="color: blueviolet">HTML 101</h1> -->
+
+    <!--
+        Tag: h1
+        Content : HTML 101
+        Attribute: style
+        Attribut Value: color: blueviolet
+        Elemet: Tag - Attribut Value
+    -->
+
+    <!-- Heading : 1 - 6 -->
+    <!-- <h1>Heading One</h1>
+    <h2>Heading Two</h2>
+    <h3>Heading Three</h3>
+    <h4>Heading Four</h4>
+    <h5>Heading Five</h5>
+    <h6>Heading Six</h6> -->
+
+    <!-- Paragraph -->
+    <!-- <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum earum et
+      sequi rerum eius, illo eligendi laudantium velit qui nam adipisci
+      quibusdam quos quasi dignissimos vel repellat. Fuga, praesentium dicta.
+    </p> -->
+
+    <!-- Text Fomatting -->
+    <!-- <b>Bold</b>
+    <br />
+    <strong>Strong</strong>
+    <br /><br />
+
+    <i> Italic </i>
+    <br />
+    <em>Emphasized</em>
+    <br /><br />
+
+    <u>Underlined</u>
+    <br />
+    <ins>Inserted</ins>
+    <br /><br />
+
+    <mark>Marked</mark>
+    <br />
+    <del>Deleted</del>
+    <br /><br />
+
+    Normal<small>Small</small>
+    <br />
+
+    Normal <sub>Subscript</sub>
+    <br />
+
+    Normal <sup>Supscript</sup>
+    <br /> -->
+
+    <!-- List -->
+
+    <!-- Ordered list (memiliki urutan) -->
+    <!-- <ol type="a">
+      <li>List Pertanma</li>
+      <li>List Kedua</li>
+      <li>List Ketiga</li>
+    </ol> -->
+
+    <!-- unordered list (tidak memiliki urutan) -->
+
+    <!-- <ul type="square">
+      <li>List Pertanma</li>
+      <li>List Kedua</li>
+      <li>List Ketiga</li>
+    </ul>
+
+    <div style="height: 700px"></div> -->
+
+    <!-- <h1>INDEX PAGE</h1> -->
+    <!-- Anchor Tag -->
+
+    <!-- Absolute Link -->
+    <!--
+        Merupakan sebuah alamat yang sifatnya 'absolute',
+        alamat akan selalu sama, terlepas dari file mana dia diakses
+    -->
+
+    <!-- <h2>
+      <a href="https://purwadhika.com/" target="blank">Purwadhika</a>
+    </h2> -->
+
+    <!-- Relative link -->
+    <!-- <h2>
+      <a href="./about/about.html" target="blank">About Page</a>
+    </h2>
+
+    <h2>
+      <a href="./about/subfiles/contact.html" target="blank">Contact Page</a>
+    </h2> -->
+
+    <!-- <h1>FORM</h1> -->
+
+    <!-- <form> -->
+    <!-- Text Box -->
+    <!-- <p>
+        <label for="name">Name</label>
+        <input type="text" id="name" />
+      </p>
+      <p>
+        <label for="email">Email</label>
+        <input type="email" id="email" />
+      </p> -->
+    <!-- Radio Button -->
+    <!-- <p>
+        <input type="radio" name="sama" id="men" />
+        <label for="men">Men</label>
+        <input type="radio" name="sama" id="women" />
+        <label for="women">Women</label>
+      </p> -->
+
+    <!-- Checkbox -->
+
+    <!-- <p>
+        <input type="checkbox" id="html" /> <label for="html">H T M L</label>
+        <input type="checkbox" id="css" /> <label for="css">C S S</label>
+      </p> -->
+
+    <!-- Select -->
+
+    <!-- <p>
+        <select>
+          <optgroup label="Hijau">
+            <option value="hijau tosca">Hijau Tosca</option>
+            <option value="hijau daun">Hijau Daun</option>
+          </optgroup>
+          <optgroup label="Merah">
+            <option value="merah muda">Merah Muda</option>
+            <option value="merah maroon">Merah Maroon</option>
+          </optgroup>
+          <optgroup label="Biru">
+            <option value="biru laut">Biru Laut</option>
+            <option value="biru dongker">Biru Dongker</option>
+          </optgroup>
+        </select>
+      </p> -->
+
+    <!-- Input Button -->
+    <!-- <input type="button" value="Click Input Button" /> -->
+
+    <!-- Button -->
+    <!-- Jika ditaruh didalam tag form, maka akan merefresh halaman -->
+    <!-- <button>Click Button</button> -->
+    <!-- </form> -->
+
+    <!-- <h1>TABLE</h1> -->
+
+    <!-- <table>
+      <tr>
+        <th>No</th>
+        <th>Name</th>
+        <th>Hobby</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Football</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Kuroky</td>
+        <td>Cook</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Miracle</td>
+        <td>Sing</td>
+      </tr>
+    </table> -->
+
+    <h1>Interactive Form</h1>
+
+    <form>
+      <p>
+        <label for="name">Name</label>
+        <input type="text" id="name" />
+      </p>
+      <p>
+        <label for="price">Price</label>
+        <input type="number" id="price" />
+      </p>
+      <p>
+        <label>Condition</label>
+        <input type="radio" name="condition" value="New" id="new" />
+        <label for="new">New</label>
+        <input type="radio" name="condition" value="Second" id="second" />
+        <label for="second">Second</label>
+      </p>
+      <p>
+        <label>Warehouse</label>
+        <select id="warehouse">
+          <option value="JKT">Jakarta</option>
+          <option value="BDG">Bandung</option>
+          <option value="DIY">Jogja</option>
+        </select>
+      </p>
+      <p>
+        <label>Courier</label>
+        <input type="checkbox" name="courier" value="JNE" id="jne" />
+        <label for="jne">JNE</label>
+        <input type="checkbox" name="courier" value="J&T" id="j&t" />
+        <label for="j&t">J&T</label>
+        <input
+          type="checkbox"
+          name="courier"
+          value="Ninja Express"
+          id="ninja"
+        />
+        <label for="ninja">Ninja Express</label>
+      </p>
+
+      <input type="button" value="Create" onclick="createInfo()" />
+    </form>
+
+    <p id="result">Waiting for result ...</p>
+  </body>
+</html>

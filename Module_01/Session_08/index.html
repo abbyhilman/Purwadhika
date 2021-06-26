@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Market V.2.2</title>
+    <script src="./index.js" defer></script>
+
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px;
+        /* font-size: 1.5em; */
+      }
+
+      form {
+        max-width: 80%;
+        margin: 0 auto;
+      }
+      /* body {
+        font-size: 1.2em;
+      }
+
+      select option {
+        font-size: 1.2em;
+      }
+
+      select {
+        height: 30px;
+      }
+
+      label {
+        display: inline-block;
+        width: 120px;
+        padding-right: 10px;
+      }
+
+      input[type="button"] {
+        width: 350px;
+        height: 30px;
+      } */
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">MARKET V.2.2</h1>
+
+    <form>
+      <!-- FILTER -->
+      <fieldset>
+        <legend>Filter</legend>
+
+        <p>
+          Name :
+          <input
+            type="text"
+            id="nameFilter"
+            placeholder="Name"
+            name="txtFilter"
+            oninput="fnFilterName()"
+          />
+        </p>
+        <p>
+          Price :
+          <input
+            type="text"
+            id="min"
+            name="txtFilter"
+            placeholder="Min"
+            onkeyup="fnFilterPrice()"
+          />
+          -
+          <input
+            type="text"
+            id="max"
+            name="txtFilter"
+            placeholder="Max"
+            onkeyup="fnFilterPrice()"
+          />
+        </p>
+        <p>
+          Category :
+          <select id="catFilter" onclick="fnFilterCategory()"></select>
+        </p>
+        <p><input type="button" value="Reset" onclick="fnResetFilter()" /></p>
+      </fieldset>
+
+      <!-- Input -->
+      <fieldset>
+        <legend>Input Data</legend>
+        <table>
+          <td><input type="text" id="nameInput" placeholder="Name" /></td>
+          <td><input type="number" id="priceInput" placeholder="Price" /></td>
+          <td>
+            <select id="catInput"></select>
+          </td>
+          <td><input type="text" id="stockInput" placeholder="Stock" /></td>
+        </table>
+        <p><input type="button" value="Input" onclick="fnInputData()" /></p>
+      </fieldset>
+
+      <!-- RENDER -->
+      <fieldset>
+        <legend>Data Table</legend>
+        <table>
+          <thead>
+            <th>Id</th>
+            <th>Category</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Buy</th>
+            <th colspan="2">Action</th>
+          </thead>
+          <tbody id="render"></tbody>
+        </table>
+      </fieldset>
+
+      <!-- CARTS -->
+      <fieldset>
+        <legend>Cart</legend>
+        <table>
+          <thead>
+            <th>Id</th>
+            <th>Category</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th colspan="2">Action</th>
+          </thead>
+          <tbody id="carts"></tbody>
+        </table>
+
+        <p>
+          <input type="button" value="Payment" onclick="fnPayment()" />
+        </p>
+      </fieldset>
+
+      <!-- Payment -->
+      <fieldset>
+        <legend>Payment</legend>
+        <h2>Transaction Detail</h2>
+        <div id="payment"></div>
+      </fieldset>
+    </form>
+
+    <div style="height: 500px"></div>
+  </body>
+</html>
+
+<!-- Event Handler : onclik, ondoubleclick dsb -->
+<!-- Event : CLick, double Click , input, change -->
