@@ -283,38 +283,66 @@ huruf */
 
 // Sample #2
 
-const numbers = [1, 1, 3, 1, 5, 2, 7, 2];
+// const numbers = [1, 1, 3, 1, 5, 2, 7, 2];
 
-const mode = (number) => {
-  number.sort();
+// const mode = (number) => {
+//   number.sort();
 
-  var obj = {};
-  var output = [];
-  var maxOutput = 0;
+//   var obj = {};
+//   var output = [];
+//   var maxOutput = 0;
 
-  numbers.forEach((val) => {
-    if (obj[val] == undefined) {
-      obj[val] = 0;
-      obj[val]++;
-    } else {
-      obj[val]++;
-    }
-  });
+//   numbers.forEach((val) => {
+//     if (obj[val] == undefined) {
+//       obj[val] = 0;
+//       obj[val]++;
+//     } else {
+//       obj[val]++;
+//     }
+//   });
 
-  for (var key in obj) {
-    if (obj[key] > maxOutput) {
-      maxOutput = obj[key];
-      if (maxOutput > 1) {
-        output.push(key);
-      }
-    }
-  }
+//   for (var key in obj) {
+//     if (obj[key] > maxOutput) {
+//       maxOutput = obj[key];
+//       if (maxOutput > 1) {
+//         output.push(key);
+//       }
+//     }
+//   }
 
-  return output;
-};
+//   return output;
+// };
 
-var modesResult = mode(numbers);
-console.log(`Mode : ${modesResult}`);
+// Decode Morse Code
+
+// decodeMorse = function(morseCode){
+// var decodeString = "";
+// var morseCodeWords = morseCode.split("   ");
+// for (var i in morseCodeWords) {
+//   var morseCodeArray = morseCodeWords[i].split(" ");
+//   for (var j in morseCodeArray) {
+//     if (MORSE_CODE[morseCodeArray[j]] !== undefined) {
+//       decodeString += MORSE_CODE[morseCodeArray[j]];
+//     }
+//   }
+//   decodeString += " ";
+// }
+// decodeString = decodeString.trim();
+// return decodeString;
+// }
+
+// decodeMorse('.... . -.--   .--- ..- -.. .');
+
+// function alphabetPosition(text) {
+//   var result = "";
+//   for (var i = 0; i < text.length; i++) {
+//     var code = text.toUpperCase().charCodeAt(i)
+//     if (code > 64 && code < 91) result += (code - 64) + " ";
+//   }
+
+//   return result.slice(0, result.length - 1);
+// }
+// console.log(alphabetPosition("The sunset sets at twelve o' clock."));
 
 // Exercise 9
 
