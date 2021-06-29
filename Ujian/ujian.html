@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script>
+      let konfrimasi = (pertanyaan, mau, tidak) => {
+        if (confirm(pertanyaan)) mau();
+        else tidak();
+      };
+      function jikaIya() {
+        alert("Mantap Sekali");
+      }
+      function jikaTidak() {
+        alert("Sayang Sekali");
+      }
+      konfrimasi("Maukah kamu menambang bitcoin?", jikaIya, jikaTidak);
+    </script> -->
+    <script>
+      function fungsiKu() {
+        let input = document.getElementById("test")["nama"].value;
+
+        console.log(input);
+      }
+    </script>
+  </head>
+  <body>
+    <form id="test">
+      Nama: <input type="text" id="nama" class="nama1" />
+      <br />
+    </form>
+    <button onclick="fungsiKu()">Coba Klik!</button>
+  </body>
+</html>

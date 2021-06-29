@@ -4,7 +4,7 @@
 // a - 0.24;
 // a * 2;
 // a--;
-// console.log(a);
+// console.log(a); 21.25
 
 // Problem 15
 
@@ -88,7 +88,7 @@
 // b = arr[3];
 // c = arr[4];
 
-// console.log((a * b) / c);
+// console.log((a * b) / c); typeError; arr[4].pop is not a function
 
 // let str = "1342";
 // let count = 0;
@@ -100,7 +100,7 @@
 //   x++;
 // }
 
-// console.log(count + x);
+// console.log(count + x); // 7
 
 // let xx = isNaN("true");
 // let yz = isNaN(false);
@@ -109,16 +109,174 @@
 //   console.log(xx);
 // } else {
 //   console.log(yz);
-// } false
+// }
+// false;
 
-let arr = [
-  "1",
-  ["2.5", [false]],
-  true,
-  "false",
-  0,
-  [[1], (0)[(NaN, undefined, "true")]],
-  null,
-  "0",
-  undefineds,
-];
+// let arr = [
+//   "1",
+//   ["2.5", [false]],
+//   true,
+//   "false",
+//   0,
+//   [[1], (0)[(NaN, undefined, "true")]],
+//   null,
+//   "0",
+//   undefined,
+// ];
+
+// console.log(Boolean(arr[1][1]) + Boolean(arr[5][0])); 2
+
+// let result = 5;
+
+// function a() {
+//   console.log(result);
+// }
+
+// let b = () => {
+//   var result = 10;
+//   c();
+// };
+
+// var c = function () {
+//   var result = 3;
+//   a();
+// };
+
+// b(); 5
+
+// let str = "javascript is for everyone yo!".split(" ");
+// console.log(str);
+
+// for (let i = 0; i < str.length; i += 1) {
+//   console.log(str[i]);
+//   console.log(str);
+
+//   return str.push(str[i]);
+// }
+
+// console.log(str); error jika tidak memakai return akan menjadi infinite loop
+
+// let list = {
+//   satu: [
+//     "shoes",
+//     ["car", "fan"],
+//     [
+//       function goods() {
+//         console.log("laptop");
+//       },
+//       { item: "glass" },
+//     ],
+//   ],
+//   dua: () => {
+//     return {
+//       goods: ["pillow", "laptop", ["gold", () => console.log("laptop")]],
+//     };
+//   },
+//   tiga: {
+//     a: "car",
+//     b: "door",
+//     c: function thing() {
+//       return ["laptop"];
+//     },
+//   },
+// };
+
+// list.dua()["goods"][2][1](); output laptop
+
+// list.satu[2][1]goods() error salah
+
+// list.dua.goods[2][1](); error salah
+
+// list.dua().[goods][2][1](); error salah
+
+// let result = "Javascript is very easy",
+//   count = 5;
+
+// do {
+//   switch (count % 2) {
+//     case 0:
+//       result = result.slice(count, count + 15);
+//       break;
+//     default:
+//       result = result.slice(count, count + 15);
+//   }
+//   count -= 1;
+// } while (count);
+
+// console.log(result); ery e
+
+// class Kue {
+//   constructor(bentuk, rasa) {
+//     this.bentuk = bentuk;
+//     this.rasa = rasa;
+//   }
+
+//   halo = () => {
+//     console.log(`Rasa saya adakah ${rasa}`);
+//   };
+// }
+
+// class Pie extends Kue {
+//   constructor(bentuk, item, rasa) {
+//     super(bentuk, rasa);
+//     this.item = item;
+//   }
+// }
+
+// let kueBaru = new Pie("Pie", ["Meses", "Apple", "Pandan"]);
+
+// kueBaru.halo(); //ReferenceError: rasa is not defined
+
+// Solved
+
+// class Kue {
+//   constructor(bentuk, rasa) {
+//     this.bentuk = bentuk;
+//     this.rasa = rasa;
+//   }
+
+//   halo = () => {
+//     console.log(`Rasa saya adakah ${this.rasa}`);
+//   };
+// }
+
+// class Pie extends Kue {
+//   constructor(bentuk, item, rasa) {
+//     super(bentuk, rasa);
+//     this.item = item;
+//   }
+// }
+
+// let kueBaru = new Pie("Pie", ["Meses", "Apple", "Pandan"], "Manis");
+
+// kueBaru.halo(); //Rasa saya adakah Manis
+
+// let Word = "Learn Javascript at Purwadhika";
+
+// Word.replace("a", "o");
+// Word.split(" ");
+// Word.reverse();
+
+// console.log(Word.replace(/a/g, "o")); // TypeError: Word.reverse is not a function
+
+// let arr = [
+//   "book",
+//   true,
+//   [1, "banana"],
+//   null,
+//   ["false", [2, NaN], false, ["clock", 0]],
+//   NaN,
+//   false,
+//   [true],
+// ];
+
+// console.log(Boolean(arr[4][3][0])); // true
+
+// let Number = 12;
+// Number--;
+// Number--;
+// Number * 2;
+// Number % 3;
+// console.log(Number); // 10
+
+// console.log(([true] && 1 == Boolean("false")) || { true: "false" }); // true
