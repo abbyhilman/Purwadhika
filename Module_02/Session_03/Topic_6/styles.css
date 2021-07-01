@@ -1,0 +1,41 @@
+/* p {
+  font-size: 2.54cm;
+}
+
+span {
+  font-size: 1in;
+} */
+/* 
+html {
+  font-size: 32px;
+} */
+
+/* div {
+  font-size: 32px;
+}
+
+span {
+  font-size: 0.5em;
+} */
+
+/* div {
+  height: 150px;
+} */
+
+.vw-25 {
+  background-color: lightblue;
+  width: 25vw;
+}
+
+.vw-50 {
+  background-color: lightpink;
+  width: 50vw;
+}
+
+.vh-25 {
+  height: 25vh;
+}
+
+.vh-50 {
+  height: 50vh;
+}

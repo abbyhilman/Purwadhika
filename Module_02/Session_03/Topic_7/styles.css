@@ -1,0 +1,19 @@
+div {
+  background-color: lightblue;
+  padding: 8px 16px 30px 50px;
+  /* padding-left: 8px;
+  padding-bottom: 20px;
+  */
+  /* border: 2px dashed red; */
+  border-bottom: 2px solid red;
+  border-left: 2px solid blue;
+}
+.black {
+  color: white;
+  background-color: black;
+}
+
+.pink {
+  background-color: pink;
+  margin: 10px;
+}
