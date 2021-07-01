@@ -6,3 +6,15 @@
 .blue {
   background-color: #4287f4;
 }
+
+.red {
+  background-color: rgba(255, 25, 25, 1);
+}
+
+.imageBack {
+  background-image: url("../../Session_02/images/car.png");
+  background-size: 200px;
+  background-repeat: no-repeat;
+  height: 1500px;
+  background-attachment: scroll;
+}

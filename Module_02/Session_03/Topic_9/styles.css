@@ -1,0 +1,24 @@
+.flex-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  background-color: aquamarine;
+  height: 800px;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.blue {
+  background-color: lightblue;
+}
+
+.gray {
+  background-color: gray;
+}
