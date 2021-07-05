@@ -1,0 +1,51 @@
+// function greeting(parameterVariable) {
+//   // This line prints 'Hello, World!' to the console:
+//   console.log("Hello, World!");
+
+//   // Write a line of code that prints parameterVariable to stdout using
+//   console.log(parameterVariable);
+// }
+
+// greeting("Welcome to 10 Days of JavaScript!");
+
+// function performOperation(secondInteger, secondDecimal, secondString) {
+//   // Declare a variable named 'firstInteger' and initialize with integer value 4.
+//   const firstInteger = 4;
+
+//   // Declare a variable named 'firstDecimal' and initialize with floating-point value 4.0.
+//   const firstDecimal = 4.0;
+
+//   // Declare a variable named 'firstString' and initialize with the string "HackerRank".
+//   const firstString = "HackerRank ";
+
+//   // Write code that uses console.log to print the sum of the 'firstInteger' and 'secondInteger' (converted to a Number        type) on a new line.
+//   console.log(firstInteger + +secondInteger);
+
+//   // Write code that uses console.log to print the sum of 'firstDecimal' and 'secondDecimal' (converted to a Number            type) on a new line.
+//   console.log(firstDecimal + +secondDecimal);
+
+//   // Write code that uses console.log to print the concatenation of 'firstString' and 'secondString' on a new line. The        variable 'firstString' must be printed first.
+//   console.log(firstString + secondString);
+// }
+
+// performOperation(12, 8.32, "Test");
+
+// Loop
+
+/*
+ * Complete the vowelsAndConsonants function.
+ * Print your output using 'console.log()'.
+ */
+function vowelsAndConsonants(s) {
+  const vowels = [];
+  const consonants = [];
+  s.split("").forEach(function (o) {
+    if (["a", "e", "i", "o", "u"].indexOf(o) != -1) {
+      vowels.push(o);
+    } else {
+      consonants.push(o);
+    }
+  });
+  console.log(vowels.join("\n"));
+  console.log(consonants.join("\n"));
+}

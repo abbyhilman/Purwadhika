@@ -1,10 +1,26 @@
 // var modesResult = mode(numbers);
 // let arr = [3.5, 7.4, 4.6, 6.2, 1.9, 3.3];
+// let d = [];
+
+// let a = arr.map((element) => Math.round(element));
+// let b = arr.forEach((item) => {
+//   const b2 = Math.ceil(item);
+//   if (b2) {
+//     d.push(b2);
+//   }
+
+//   //   console.log(d);
+
+//   return d;
+// });
+// let c = arr.filter((value) => value <= 5.2);
+
+// console.log(a);
 // let a = 3 + 5 * 4 - 3 / 2 ** 2;
-// a - 0.24;
+// a - 0.25;
 // a * 2;
 // a--;
-// console.log(a); 21.25
+// console.log(a); // 21.25
 
 // Problem 15
 
@@ -60,7 +76,8 @@
 //   result = result + number;
 // }
 
-// console.log(result); 1110875421
+// console.log(result);
+// 1110875421;
 
 // Problem 24
 
@@ -74,9 +91,9 @@
 // }
 // let user = new iniUser();
 
-// console.log(user.ref().name); John
+// console.log(user.ref().name); // John
 
-// let arr = [5, [7, 8, 2], (3)[(1, 9)], 4, 6];
+// let arr = [5, [7, 8, 2], 3, [1, 9], 4, 6];
 // let a = arr[1][1];
 // let b = arr[1][2];
 // let c = arr[4];
@@ -88,7 +105,7 @@
 // b = arr[3];
 // c = arr[4];
 
-// console.log((a * b) / c); typeError; arr[4].pop is not a function
+// console.log((a * b) / c); // 24
 
 // let str = "1342";
 // let count = 0;
@@ -126,7 +143,7 @@
 
 // console.log(Boolean(arr[1][1]) + Boolean(arr[5][0])); 2
 
-// let result = 5;
+// var result = 5;
 
 // function a() {
 //   console.log(result);
@@ -142,7 +159,7 @@
 //   a();
 // };
 
-// b(); 5
+// b(); // 5
 
 // let str = "javascript is for everyone yo!".split(" ");
 // console.log(str);
@@ -280,3 +297,5 @@
 // console.log(Number); // 10
 
 // console.log(([true] && 1 == Boolean("false")) || { true: "false" }); // true
+
+// console.log(typeof console.log);
