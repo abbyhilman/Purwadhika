@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox with Boostrap</title>
+    <link rel="stylesheet" href="../bootstrap-4.6.0-dist/css/bootstrap.css" />
+    <style>
+      .box {
+        height: 300px;
+        width: 300px;
+        background-color: lightblue;
+        border: 1px solid black;
+      }
+
+      .box-container {
+        height: 700px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="d-flex flex-row justify-content-around box-container align-items-end flex-wrap"
+    >
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
