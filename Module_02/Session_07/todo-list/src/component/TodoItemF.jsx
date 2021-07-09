@@ -1,6 +1,6 @@
 import React from "react";
 
-const TodoItem = ({ title }) => {
+const TodoItem = (props) => {
   const deleteBtnHandler = () => {
     alert("Anda menekan button delete");
   };
@@ -11,7 +11,7 @@ const TodoItem = ({ title }) => {
 
   return (
     <div className="my-1 d-flex flex-row justify-content-between todo-item-container align-items-center">
-      {title}
+      {props.todoData.activity} ID: {props.todoData.id}
       <div>
         <button onClick={deleteBtnHandler} className="btn btn-danger">
           Delete
