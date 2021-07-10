@@ -11,13 +11,13 @@
       "id": 3
     },
     {
-      "isFinished": false,
+      "isFinished": true,
       "activity": "Coding",
       "id": 4
     },
     {
       "activity": "Design",
-      "isFinished": true,
+      "isFinished": false,
       "id": 5
     }
   ],
