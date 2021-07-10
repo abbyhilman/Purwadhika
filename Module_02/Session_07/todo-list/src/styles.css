@@ -1,3 +1,9 @@
 .todo-item-container {
   width: 400px;
 }
+
+.container {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}

@@ -19,7 +19,6 @@ class App extends React.Component {
     // },
     // arr: ["Pisang", "Apel", "Leci"],
     arrObj: [],
-
     inputTodo: "",
   };
   // Synchronous semua saling menunggu untuk proses selanjutnya
@@ -36,6 +35,13 @@ class App extends React.Component {
   componentDidMount() {
     this.fetchTodo();
   }
+
+  // componentWillUnmount() {
+  //   alert("UNMOUNT");
+  // }
+
+  // componentDidUpdate trigger misalnya ada perubahan state or props
+  // componentDidUpdate() {}
 
   completeTodo = (id) => {
     Axios.patch(`http://localhost:2000/todo/${id}`, {
@@ -107,8 +113,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>todo list</h1>
+      <div className="container">
+        <h1>Todo list</h1>
         {/* <h1>{this.state.arr[1]}</h1> */}
         {this.renderToDoList()}
         <div>
