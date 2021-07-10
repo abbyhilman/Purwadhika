@@ -1,0 +1,47 @@
+{
+  "todo": [
+    {
+      "isFinished": true,
+      "activity": "Mandi",
+      "id": 2
+    },
+    {
+      "isFinished": false,
+      "activity": "Tidur",
+      "id": 3
+    },
+    {
+      "isFinished": false,
+      "activity": "Coding",
+      "id": 4
+    },
+    {
+      "isFinished": true,
+      "activity": "Rebahan",
+      "id": 5
+    }
+  ],
+  "users": [],
+  "arrObjStr": [
+    {
+      "activity": {
+        "id": "1"
+      }
+    },
+    {
+      "activity": {
+        "id": "2"
+      }
+    },
+    {
+      "activity": {
+        "id": "3"
+      }
+    },
+    {
+      "activity": {
+        "id": "4"
+      }
+    }
+  ]
+}
