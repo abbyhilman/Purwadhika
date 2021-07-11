@@ -1,7 +1,12 @@
 {
   "todo": [
     {
-      "isFinished": true,
+      "isFinished": false,
+      "activity": "Makan",
+      "id": 1
+    },
+    {
+      "isFinished": false,
       "activity": "Mandi",
       "id": 2
     },
@@ -11,7 +16,7 @@
       "id": 3
     },
     {
-      "isFinished": true,
+      "isFinished": false,
       "activity": "Coding",
       "id": 4
     },

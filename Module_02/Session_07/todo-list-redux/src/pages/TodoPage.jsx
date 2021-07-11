@@ -2,86 +2,50 @@ import React from "react";
 import "../styles.css";
 import "bootstrap/dist/css/bootstrap.css";
 import TodoItem from "../component/TodoItem";
-import Axios from "axios";
+import { connect } from "react-redux";
+import {
+  changeTodoCount,
+  fetchTodoGlobal,
+  inputTodo,
+  completeTodo,
+  addTodo,
+  deleteTodo,
+} from "../redux/actions/todo";
 
 class TodoPage extends React.Component {
-  state = {
-    arrObj: [],
-    inputTodo: "",
-  };
-  fetchTodo = () => {
-    Axios.get("http://localhost:2000/todo")
-      .then((res) => this.setState({ arrObj: res.data }))
-      .catch((err) => {
-        alert("Terjadi Kesalahan di server!!");
-      });
-  };
-
   componentDidMount() {
-    this.fetchTodo();
+    this.props.fetchTodoGlobal();
   }
 
-  completeTodo = (id) => {
-    Axios.patch(`http://localhost:2000/todo/${id}`, {
-      isFinished: true,
-    })
-      .then(() => {
-        alert("Berhasil Complete todo!");
-        this.fetchTodo();
-      })
-      .catch((err) => {
-        alert("Terjadi Kesalahan di server!!");
-      });
-  };
-
   renderToDoList = () => {
-    return this.state.arrObj.map((val) => {
+    return this.props.todoGlobalState.todoList.map((val) => {
       return (
         <TodoItem
-          completeTodoHandler={this.completeTodo}
-          deleteTodoHandler={this.deleteTodo}
+          completeTodoHandler={() => this.props.completeTodo(val.id)}
+          deleteTodoHandler={() => this.props.deleteTodo(val.id)}
           todoData={val}
         />
       );
     });
   };
 
-  addTodo = () => {
-    Axios.post("http://localhost:2000/todo", {
-      activity: this.state.inputTodo,
-      isFinished: false,
-    })
-      .then(() => {
-        alert("Success added Todo");
-        this.fetchTodo();
-      })
-      .catch((err) => {
-        alert("Terjadi Kesalahan di server!!");
-      });
-  };
-
-  deleteTodo = (id) => {
-    Axios.delete(`http://localhost:2000/todo/${id}`)
-      .then(() => {
-        alert("Success delete todo");
-        this.fetchTodo();
-      })
-      .catch((err) => {
-        alert("Terjadi Kesalahan di server!!");
-      });
-  };
-
   inputHandler = (event) => {
-    this.setState({ inputTodo: event.target.value });
+    this.props.inputTodo(event.target.value);
   };
 
   render() {
     return (
       <div className="container mt-3">
+        <button
+          className="btn btn-info"
+          onClick={() => this.props.fetchTodoGlobal()}
+        >
+          Get my Todo List {this.props.todoGlobalState.todoCount}
+        </button>
         {this.renderToDoList()}
         <div className="mt-3">
           <input type="text" className="mx-3" onChange={this.inputHandler} />
-          <button class="btn btn-primary" onClick={this.addTodo}>
+          <button class="btn btn-primary" onClick={this.props.addTodo}>
             Add Todo
           </button>
         </div>
@@ -90,4 +54,19 @@ class TodoPage extends React.Component {
   }
 }
 
-export default TodoPage;
+const mapStateToProps = (state) => {
+  return {
+    todoGlobalState: state.todo,
+  };
+};
+
+const mapDispatchToProps = {
+  changeTodoCount,
+  fetchTodoGlobal,
+  inputTodo,
+  completeTodo,
+  addTodo,
+  deleteTodo,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(TodoPage);
