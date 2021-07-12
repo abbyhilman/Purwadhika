@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "fullname": "Abby",
+      "username": "Byhil",
+      "email": "byhil@mail.com",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "fullname": "Byhil",
+      "username": "Abby",
+      "email": "abby@mail.com",
+      "password": "12345",
+      "role": "user",
+      "id": 2
+    },
+    {
+      "fullname": "Test",
+      "username": "test",
+      "email": "test@mail.com",
+      "password": "12345",
+      "role": "user",
+      "id": 3
+    },
+    {
+      "fullname": "Hiha",
+      "username": "hihi",
+      "email": "hihi@mail.com",
+      "password": "1234",
+      "role": "user",
+      "id": 4
+    },
+    {
+      "fullname": "Jendo",
+      "username": "jen",
+      "email": "jen@mail.com",
+      "password": "12345",
+      "role": "user",
+      "id": 5
+    },
+    {
+      "fullname": "Test lagi",
+      "username": "lagi",
+      "email": "lagi@mail.com",
+      "password": "password",
+      "role": "user",
+      "id": 6
+    }
+  ],
+  "transactions": [],
+  "products": [],
+  "carts": []
+}
