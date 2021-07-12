@@ -6,49 +6,26 @@
       "email": "byhil@mail.com",
       "password": "1234",
       "id": 1
-    },
-    {
-      "fullname": "Byhil",
-      "username": "Abby",
-      "email": "abby@mail.com",
-      "password": "12345",
-      "role": "user",
-      "id": 2
-    },
-    {
-      "fullname": "Test",
-      "username": "test",
-      "email": "test@mail.com",
-      "password": "12345",
-      "role": "user",
-      "id": 3
-    },
-    {
-      "fullname": "Hiha",
-      "username": "hihi",
-      "email": "hihi@mail.com",
-      "password": "1234",
-      "role": "user",
-      "id": 4
-    },
-    {
-      "fullname": "Jendo",
-      "username": "jen",
-      "email": "jen@mail.com",
-      "password": "12345",
-      "role": "user",
-      "id": 5
-    },
-    {
-      "fullname": "Test lagi",
-      "username": "lagi",
-      "email": "lagi@mail.com",
-      "password": "password",
-      "role": "user",
-      "id": 6
     }
   ],
   "transactions": [],
-  "products": [],
+  "products": [
+    {
+      "id": 1,
+      "productName": "Kaos Polos Hitam",
+      "price": 25000,
+      "productImage": "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F76%2Fb9%2F76b9766522a63ae801ea85945b18ec9289e743de.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bmen_tshirtstanks_shortsleeve%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]",
+      "description": "Ini Product bagus lo",
+      "category": "kaos"
+    },
+    {
+      "id": 2,
+      "productName": "Kaos Polos Putih",
+      "price": 30000,
+      "productImage": "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F2c%2F82%2F2c82435e88bb7a28468576feaa1fe7c99a2b9946.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bmen_tshirtstanks_shortsleeve%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/zoom]&zoom=zoom",
+      "description": "Ini Product bagus bgt lo",
+      "category": "kaos"
+    }
+  ],
   "carts": []
 }
