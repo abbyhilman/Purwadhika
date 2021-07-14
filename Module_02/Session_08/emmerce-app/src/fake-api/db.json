@@ -6,6 +6,14 @@
       "email": "byhil@mail.com",
       "password": "1234",
       "id": 1
+    },
+    {
+      "fullname": "ByAdmin",
+      "username": "admin",
+      "email": "admin@mail.com",
+      "password": "admin",
+      "role": "admin",
+      "id": 2
     }
   ],
   "transactions": [],
@@ -145,6 +153,22 @@
       "productImage": "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F23%2F00%2F2300d90a73389d5ea41bbde03f53f28e2e77431b.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bmen_accessories_other%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
       "description": "Ini Product bagus bgt lo",
       "category": "aksesoris"
+    },
+    {
+      "productName": "Black Skinny Jeans",
+      "price": 430000,
+      "productImage": "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F5d%2F0d%2F5d0d93e035dba0a9a40f1c93e35ba0d33ea02822.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bmen_jeans_skinny%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+      "description": "5-pocket jeans in washed stretch denim with a regular waist, zip fly with button, and skinny legs.",
+      "category": "celana",
+      "id": 18
+    },
+    {
+      "productName": "Light Denim Jeans",
+      "price": 450000,
+      "productImage": "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F09%2Feb%2F09eb36bd2c323ec6ffac19e9e222b175fe21233b.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bmen_jeans_slim%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+      "description": "5-pocket jeans in washed stretch denim with a regular waist, zip fly with button, and skinny legs.",
+      "category": "celana",
+      "id": 20
     }
   ],
   "carts": []
