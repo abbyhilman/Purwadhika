@@ -10,8 +10,9 @@ export const changeTodoCount = (newCount) => {
 
 export const fetchTodoGlobal = () => {
   return (dispatch) => {
-    Axios.get("http://localhost:2000/todo")
+    Axios.get("http://localhost:2000/arrObjStr")
       .then((res) => {
+        console.log(res.data);
         dispatch({
           type: "GET_TODO_LIST",
           payload: res.data,
@@ -56,9 +57,9 @@ export const completeTodo = (id) => {
 
 export const addTodo = () => {
   return (dispatch) => {
-    Axios.post("http://localhost:2000/todo", {
-      activity: store.getState().todo.inputTodo,
-      isFinished: false,
+    Axios.post("http://localhost:2000/arrObjStr", {
+      id: store.getState().todo.inputTodo,
+      // isFinished: false,
     })
       .then(() => {
         alert("Success added Todo");

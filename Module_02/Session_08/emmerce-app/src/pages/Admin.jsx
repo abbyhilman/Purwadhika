@@ -92,7 +92,7 @@ class admin extends React.Component {
                 onChange={this.inputHandler}
                 name="editProductName"
                 type="text"
-                className="form-control"
+                className="form-select"
               />
             </td>
             <td>
@@ -101,7 +101,7 @@ class admin extends React.Component {
                 onChange={this.inputHandler}
                 name="editPrice"
                 type="number"
-                className="form-control"
+                className="form-select"
               />
             </td>
             <td>
@@ -110,7 +110,7 @@ class admin extends React.Component {
                 onChange={this.inputHandler}
                 name="editProductImage"
                 type="text"
-                className="form-control"
+                className="form-select"
               />
             </td>
             <td>
@@ -119,7 +119,7 @@ class admin extends React.Component {
                 onChange={this.inputHandler}
                 name="editDescription"
                 type="text"
-                className="form-control"
+                className="form-select"
               />
             </td>
             <td>
@@ -226,7 +226,7 @@ class admin extends React.Component {
           <div className="col-12 text-center">
             <h1>Manage Product</h1>
             <table className="table mt-4">
-              <thead className="thead-light">
+              <thead className="table-light">
                 <tr>
                   <th>ID</th>
                   <th>Name</th>

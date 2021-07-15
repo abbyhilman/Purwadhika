@@ -64,8 +64,12 @@ class home extends React.Component {
       beginningIndex,
       beginningIndex + this.state.itemPerPage
     );
-    return currentData.map((item) => {
-      return <ProductCard productData={item} />;
+    return currentData.map((item, index) => {
+      return (
+        <div key={index}>
+          <ProductCard productData={item} />
+        </div>
+      );
     });
   }
 

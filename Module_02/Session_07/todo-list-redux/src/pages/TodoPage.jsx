@@ -45,7 +45,7 @@ class TodoPage extends React.Component {
         {this.renderToDoList()}
         <div className="mt-3">
           <input type="text" className="mx-3" onChange={this.inputHandler} />
-          <button class="btn btn-primary" onClick={this.props.addTodo}>
+          <button className="btn btn-primary" onClick={this.props.addTodo}>
             Add Todo
           </button>
         </div>
