@@ -143,6 +143,35 @@
         }
       ],
       "id": 5
+    },
+    {
+      "userId": 1,
+      "address": "Jalan Apa",
+      "recipientName": "BeliDariDash",
+      "totalPrice": 124500,
+      "totalPayment": 125000,
+      "transactionDate": "15 - 7 -2021",
+      "transactionItems": [
+        {
+          "userId": 1,
+          "productId": 2,
+          "price": 30000,
+          "productName": "Kaos Polos Putih",
+          "productImage": "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F2c%2F82%2F2c82435e88bb7a28468576feaa1fe7c99a2b9946.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bmen_tshirtstanks_shortsleeve%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/zoom]&zoom=zoom",
+          "quantity": 2,
+          "id": 1
+        },
+        {
+          "userId": 1,
+          "productId": 6,
+          "price": 23000,
+          "productName": "Kaos Polos Hijau",
+          "productImage": "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fe8%2F8a%2Fe88aa3790ca243997d53344b13f22ae43bd51ea3.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]",
+          "quantity": 1,
+          "id": 2
+        }
+      ],
+      "id": 6
     }
   ],
   "products": [
