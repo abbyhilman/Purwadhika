@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Most Used Word</title>
+
+    <script>
+      function findMostUseWord() {
+        let sentence = document
+          .getElementById("sentenceInput")
+          .value.toLowerCase();
+
+        sentence = sentence.split(" ");
+
+        let words = [];
+        let wordCounts = [];
+
+        for (let i = 0; i < sentence.length; i++) {
+          const currentWord = sentence[i];
+
+          if (words.includes(currentWord)) {
+            wordCounts[words.indexOf(currentWord)] += 1;
+          } else {
+            words.push(currentWord);
+            wordCounts[words.indexOf(currentWord)] = 1;
+          }
+        }
+
+        const mostWordCount = Math.max(...wordCounts);
+        const mostUsedWord = words[wordCounts.indexOf(mostWordCount)];
+
+        document.getElementById("result").innerHTML = `Your most used word
+          is ${mostUsedWord} with a total of ${mostWordCount} counts`;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Most Used Word</h1>
+
+    <fieldset>
+      <legend>Your sentence</legend>
+      <input id="sentenceInput" type="text" />
+      <button onclick="findMostUseWord()">Find Most Used Word</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>Result</legend>
+      <p id="result">
+        Input yout sentence and click the button to find your most used word
+      </p>
+    </fieldset>
+  </body>
+</html>

@@ -23,7 +23,7 @@ export const padding = StyleSheet.create({
     padding: spacer * 16,
   },
   py1: {
-    paddingVertical: 4,
+    paddingVertical: spacer,
   },
 });
 
