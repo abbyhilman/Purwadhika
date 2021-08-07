@@ -145,7 +145,6 @@
 				59544E73F1AC5C3F9D4E0C37 /* Pods-homeStack-homeStackTests.debug.xcconfig */,
 				4FD3DFE92F8ACC73F489490A /* Pods-homeStack-homeStackTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
