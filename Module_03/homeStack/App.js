@@ -10,11 +10,7 @@ import {useSelector, useDispatch} from 'react-redux';
 const Tab = createBottomTabNavigator();
 
 export default function App() {
-  const selector = useSelector(state => {
-    return {
-      notification: state.notification,
-    };
-  });
+  const {notification} = useSelector(state => state);
 
   return (
     <NavigationContainer>
@@ -39,27 +35,21 @@ export default function App() {
           name="Home"
           component={Home}
           options={{
-            tabBarBadge: selector.notification.home
-              ? selector.notification.home
-              : null,
+            tabBarBadge: notification.home ? notification.home : null,
           }}
         />
         <Tab.Screen
           name="Profile"
           component={Profile}
           options={{
-            tabBarBadge: selector.notification.profile
-              ? selector.notification.profile
-              : null,
+            tabBarBadge: notification.profile ? notification.profile : null,
           }}
         />
         <Tab.Screen
           name="Message"
           component={Message}
           options={{
-            tabBarBadge: selector.notification.message
-              ? selector.notification.message
-              : null,
+            tabBarBadge: notification.message ? notification.message : null,
           }}
         />
       </Tab.Navigator>

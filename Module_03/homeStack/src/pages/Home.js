@@ -1,20 +1,15 @@
 import React, {useEffect} from 'react';
 import {View, Text} from 'react-native';
-import {useSelector, useDispatch} from 'react-redux';
+import {useDispatch} from 'react-redux';
+import {clearNotification} from '../redux/action/notification';
 
 const Home = () => {
   const dispatch = useDispatch();
 
-  const clearNotification = () => {
-    dispatch({
-      type: 'CLEAR_NOTIF_PAGE',
-      payload: 'home',
-    });
-  };
-
   useEffect(() => {
-    clearNotification();
+    dispatch(clearNotification('home'));
   }, []);
+
   return (
     <View>
       <Text>Home Page</Text>

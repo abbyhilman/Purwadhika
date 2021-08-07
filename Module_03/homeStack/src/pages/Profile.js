@@ -1,19 +1,13 @@
 import React, {useEffect} from 'react';
 import {View, Text} from 'react-native';
+import {clearNotification} from '../redux/action/notification';
 import {useDispatch} from 'react-redux';
 
 const Profile = () => {
   const dispatch = useDispatch();
 
-  const clearNotification = () => {
-    dispatch({
-      type: 'CLEAR_NOTIF_PAGE',
-      payload: 'profile',
-    });
-  };
-
   useEffect(() => {
-    clearNotification();
+    dispatch(clearNotification('profile'));
   }, []);
   return (
     <View>
