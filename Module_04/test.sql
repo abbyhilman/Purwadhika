@@ -43,3 +43,23 @@ Select sum(price) as Harga_product from product;
 
 -- Calculate data product using AVG
 SELECT avg(price) as averange_price from product;
+
+-- data grouping
+Select category, count(*) as Jumlah from product group by category;
+
+-- average product pada masing-masing category using having
+Select category, avg(price) as RataRata_Price from product group by category having RataRata_Price > 100000;
+
+-- sorting data
+Select * from product order by price asc;
+Select * from product order by price desc;
+
+-- limited calling data
+Select * from product limit 5;
+Select * from product limit 2,2;
+
+-- update data
+Update product set name = "jogger loreng" where id_product = 12;
+
+-- delete data
+Delete from product where id_product = 16;
