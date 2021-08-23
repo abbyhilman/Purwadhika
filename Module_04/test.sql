@@ -63,3 +63,15 @@ Update product set name = "jogger loreng" where id_product = 12;
 
 -- delete data
 Delete from product where id_product = 16;
+
+-- relationship fk table category and product for category
+select * from category;
+select * from product;
+
+-- inner join one to one
+Select p.id_product, p.name, p.price, c.nama
+as Kategori from product p JOIN category c on p.id_category = c.id_category;
+
+-- one to many 
+
+
