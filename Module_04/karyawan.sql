@@ -75,3 +75,16 @@ Select * from karyawan k
 JOIN posisi p on k.id_posisi = p.id_posisi
 JOIN job_task jt on k.id_karyawan = jt.id_karyawan;
 
+-- LEFT JOIN
+Select * from karyawan k
+LEFT JOIN posisi p on k.id_posisi = p.id_posisi
+LEFT JOIN job_task jt on k.id_karyawan = jt.id_karyawan;
+
+-- many to many
+Select k.id_karyawan, k.nama, p.nama as posisi, jt.job_task, ji.id_job_task, ji.id_inventaris, i.id_inventaris, i.device_name from karyawan k
+LEFT JOIN posisi p on k.id_posisi = p.id_posisi
+LEFT JOIN job_task jt on jt.id_karyawan = k.id_karyawan
+LEFT JOIN job_inventaris ji on jt.id_job_task = ji.id_job_task
+LEFT JOIN inventaris i on ji.id_inventaris = i.id_inventaris;
+
+
