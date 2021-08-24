@@ -1,3 +1,3 @@
 # Purwadhika
 
-## After finished this bootcamp i hope create for MERN 
+## After finished this bootcamp i hope create MERN project
