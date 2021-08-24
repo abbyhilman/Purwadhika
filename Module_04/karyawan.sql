@@ -70,6 +70,17 @@ select * from karyawan;
 Select k.id_karyawan, k.nama, k.email, k.tahun, p.nama
 as Jabatan from karyawan k JOIN posisi p on k.id_karyawan = p.id_posisi;
 
+-- Full join 
+Select k.id_karyawan, k.nama, k.email, k.tahun, p.nama
+as Jabatan from karyawan k LEFT JOIN posisi p on k.id_karyawan = p.id_posisi
+UNION
+Select k.id_karyawan, k.nama, k.email, k.tahun, p.nama
+as Jabatan from karyawan k RIGHT JOIN posisi p on k.id_karyawan = p.id_posisi;
+
+-- same karyawan id_posisi and posisi
+Select k.id_karyawan, k.nama, k.email, k.tahun, p.nama
+as Jabatan from karyawan k JOIN posisi p on k.id_posisi = p.id_posisi;
+
 -- one to many 
 Select * from karyawan k 
 JOIN posisi p on k.id_posisi = p.id_posisi
