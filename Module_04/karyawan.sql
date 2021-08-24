@@ -87,4 +87,24 @@ LEFT JOIN job_task jt on jt.id_karyawan = k.id_karyawan
 LEFT JOIN job_inventaris ji on jt.id_job_task = ji.id_job_task
 LEFT JOIN inventaris i on ji.id_inventaris = i.id_inventaris;
 
+-- SubQueries
+Select * from karyawan where kota = "Jakarta" and usia > (select avg(usia) from karyawan where kota = "Tangerang");
+select avg(usia) from karyawan where kota = "Tangerang";
 
+-- Views 
+Create view pinjam_inventaris as 
+Select k.id_karyawan, k.nama, p.nama as Posisi, jt.job_task, i.device_name  from karyawan k 
+JOIN posisi p on p.id_posisi = k.id_posisi
+JOIN job_task jt on jt.id_karyawan = k.id_karyawan
+JOIN job_inventaris ji on ji.id_job_task = jt.id_job_task
+JOIN inventaris i on i.id_inventaris = ji.id_inventaris;
+
+select * from pinjam_inventaris;
+
+-- event scheduler
+show variables like 'event_scheduler';
+
+create event event_add_karyawan on schedule every 5 second 
+do insert into karyawan values (null, 'Aldi', 25, 'aldi@gmail.com', 75.2, 'Tangerang', 2020, 7);
+
+DROP event event_add_karyawan;
