@@ -51,6 +51,8 @@ Select category, count(*) as Jumlah from product group by category;
 Select category, avg(price) as RataRata_Price from product group by category having RataRata_Price > 100000;
 
 -- sorting data
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root1234';
+
 Select * from product order by price asc;
 Select * from product order by price desc;
 

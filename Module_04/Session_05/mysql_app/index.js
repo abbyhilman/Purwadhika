@@ -14,6 +14,6 @@ const { karyawanRouters } = require("./route");
 //   res.status(200).send(`<h1>Integrated mysql with express</h1>`);
 // });
 
-app.use("/data", karyawanRouters);
+app.use("/karyawan", karyawanRouters);
 
 app.listen(PORT, () => console.log("Express server listening on port", PORT));

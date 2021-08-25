@@ -68,7 +68,19 @@ select * from karyawan;
 
 -- inner join one to one
 Select k.id_karyawan, k.nama, k.email, k.tahun, p.nama
-as Jabatan from karyawan k JOIN posisi p on k.id_karyawan = p.id_posisi;
+as Jabatan from karyawan k JOIN posisi p on k.id_posisi = p.id_posisi;
+
+-- Full join 
+Select k.id_karyawan, k.nama, k.email, k.tahun, p.nama
+as Jabatan from karyawan k LEFT JOIN posisi p on k.id_posisi = p.id_posisi
+UNION
+Select k.id_karyawan, k.nama, k.email, k.tahun, p.nama
+as Jabatan from karyawan k RIGHT JOIN posisi p on k.id_posisi = p.id_posisi;
+
+
+-- same karyawan id_posisi and posisi
+Select k.id_karyawan, k.nama, k.email, k.tahun, p.nama
+as Jabatan from karyawan k JOIN posisi p on k.id_posisi = p.id_posisi;
 
 -- one to many 
 Select * from karyawan k 
@@ -108,3 +120,5 @@ create event event_add_karyawan on schedule every 5 second
 do insert into karyawan values (null, 'Aldi', 25, 'aldi@gmail.com', 75.2, 'Tangerang', 2020, 7);
 
 DROP event event_add_karyawan;
+
+delete from karyawan where id_karyawan between 10 and 114;
