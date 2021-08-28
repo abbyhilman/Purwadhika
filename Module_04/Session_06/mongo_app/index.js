@@ -21,6 +21,23 @@ app.get("/", (req, res) => {
   res.status(200).send("<h1>Integrated mongo db to express</h1>");
 });
 
+app.get("/get-data", (req, res) => {
+  MongoClient.connect(url, (err, client) => {
+    const db = client.db("kantor");
+    db.collection("karyawan")
+      .find({})
+      .toArray((err, docs) => {
+        if (err) {
+          res.status(500).send(err);
+        }
+        res.status(200).json({
+          message: "Get Data successfully",
+          docs,
+        });
+      });
+  });
+});
+
 app.post("/add-data", (req, res) => {
   MongoClient.connect(url, (err, client) => {
     const db = client.db("kantor");
@@ -35,6 +52,42 @@ app.post("/add-data", (req, res) => {
         res.status(200).send(result);
       }
     );
+  });
+});
+
+app.get("/get-filter", (req, res) => {
+  MongoClient.connect(url, (err, client) => {
+    const db = client.db("kantor");
+    db.collection("karyawan")
+      .find({ usia: { $gt: 20 } })
+      .toArray((err, docs) => {
+        if (err) {
+          res.status(500).send(err);
+        }
+        res.status(200).send(docs);
+      });
+  });
+});
+
+app.get("/get-group", (req, res) => {
+  MongoClient.connect(url, (err, client) => {
+    const db = client.db("kantor");
+    db.collection("karyawan")
+      .aggregate([
+        {
+          $group: {
+            _id: "$kota",
+            avgUsia: { $avg: "$usia" },
+            count: { $sum: 1 },
+          },
+        },
+      ])
+      .toArray((err, docs) => {
+        if (err) {
+          res.status(500).send(err);
+        }
+        res.status(200).send(docs);
+      });
   });
 });
 
