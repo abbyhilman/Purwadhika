@@ -26,6 +26,7 @@ app.get("/get-data", (req, res) => {
     const db = client.db("kantor");
     db.collection("karyawan")
       .find({})
+      .sort({ usia: -1 })
       .toArray((err, docs) => {
         if (err) {
           res.status(500).send(err);
