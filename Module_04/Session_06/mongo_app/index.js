@@ -26,7 +26,25 @@ app.get("/get-data", (req, res) => {
     const db = client.db("kantor");
     db.collection("karyawan")
       .find({})
-      .sort({ usia: -1 })
+      .toArray((err, docs) => {
+        if (err) {
+          res.status(500).send(err);
+        }
+        res.status(200).json({
+          message: "Get Data successfully",
+          docs,
+        });
+      });
+  });
+});
+
+app.get("/get-data-skip", (req, res) => {
+  MongoClient.connect(url, (err, client) => {
+    const db = client.db("kantor");
+    db.collection("karyawan")
+      .find({})
+      .limit(3)
+      .skip(1)
       .toArray((err, docs) => {
         if (err) {
           res.status(500).send(err);
@@ -89,6 +107,42 @@ app.get("/get-group", (req, res) => {
         }
         res.status(200).send(docs);
       });
+  });
+});
+
+app.patch("/update", (req, res) => {
+  MongoClient.connect(url, (err, client) => {
+    const db = client.db("kantor");
+    db.collection("karyawan").updateOne(
+      { ...req.query },
+      { $set: { ...req.body } },
+      (err, results) => {
+        if (err) {
+          res.status(500).send(err);
+        }
+
+        res.status(200).json({
+          message: "Success Update Data",
+          results,
+        });
+      }
+    );
+  });
+});
+
+app.delete("/delete", (req, res) => {
+  MongoClient.connect(url, (err, client) => {
+    const db = client.db("kantor");
+    db.collection("karyawan").deleteOne({ ...req.query }, (err, results) => {
+      if (err) {
+        res.status(500).send(err);
+      }
+
+      res.status(200).json({
+        message: "Success Delete",
+        results,
+      });
+    });
   });
 });
 
