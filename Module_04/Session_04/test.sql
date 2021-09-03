@@ -3,13 +3,10 @@ SELECT * FROM product;
 -- Insert data product
 
 Insert into product values 
-(null, 'celana','jogger',200000), 
-(null, 'baju','kaos polos merah',150000),
-(null, 'baju','kaos polos biru',150000),
-(null, 'baju','kaos polos hitam',150000);
+(null, 'celana','jogger',200000);
 
 -- Insert data by specific column
-Insert into product (category, name, price) values ('celana','jogger kuning', 100000);
+Insert into product (name, price) values ('jogger cokelat', 100000);
 
 -- read data (basic query)
 SELECT * FROM product;
@@ -71,7 +68,7 @@ select * from category;
 select * from product;
 
 -- inner join one to one
-Select p.id_product, p.name, p.price, c.nama
+Select p.id_product, p.name, p.price, p.image, c.nama
 as Kategori from product p JOIN category c on p.id_category = c.id_category;
 
 -- one to many 

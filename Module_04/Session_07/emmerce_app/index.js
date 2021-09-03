@@ -13,8 +13,9 @@ app.get("/", (req, res) => {
   res.status(200).send("<h1>Express Rest Api Emmerce App</h1>");
 });
 
-const { userRouters } = require("./route");
+const { userRouters, uploadRouter } = require("./route");
 
 app.use("/users", userRouters);
+app.use("/product", uploadRouter);
 
 app.listen(PORT, () => console.log("Rest API running on port", PORT));

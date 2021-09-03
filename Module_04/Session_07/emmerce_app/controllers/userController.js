@@ -55,7 +55,6 @@ module.exports = {
           if (err2) {
             res.status(500).send(err2);
           }
-
           // tools data for create token
           let {
             id_users,
@@ -92,6 +91,7 @@ module.exports = {
             }
             res.status(200).json({
               message: "Registration Success, Check Your Email",
+              userData: result2[0],
               success: true,
             });
           });
@@ -126,6 +126,26 @@ module.exports = {
         message: "Updated successfully",
         result,
       });
+    });
+  },
+  getUsersById: (req, res) => {
+    let getQueryById = `SELECT * FROM users`;
+    if (req.query.id) {
+      getQueryById = `SELECT * FROM users where id_users = ${db.escape(
+        req.query.id
+      )}`;
+    }
+    db.query(getQueryById, (err, results) => {
+      if (err) res.status(500).send(err);
+      res.status(200).send(results);
+    });
+  },
+  getAllUsers: (req, res) => {
+    let updateQuery = `Select * from users;`;
+    console.log(updateQuery);
+    db.query(updateQuery, (err, results) => {
+      if (err) res.status(500).send(err);
+      res.status(200).send(results);
     });
   },
 };
