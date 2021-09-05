@@ -93,23 +93,39 @@ module.exports = {
     });
   },
   editData: (req, res) => {
-    let dataUpdate = [];
-    for (let prop in req.body) {
-      dataUpdate.push(`${prop} = ${db.escape(req.body[prop])}`);
-    }
-    let updateQuery = `Update product set ${dataUpdate} where id_product = ${req.params.id}`;
-    db.query(updateQuery, (err, result) => {
-      if (err) {
-        res.status(500).send(err);
+    // let dataUpdate = [];
+    let path = "/image";
+    const upload = uploader(path, "IMG").fields([{ name: "file" }]);
+
+    upload(req, res, (error) => {
+      if (error) {
+        console.error(error);
+        res.status(500).send(error);
       }
-      res.status(200).json({
-        message: "Updated successfully",
-        result,
+      const { file } = req.files;
+      const filePath = file ? path + "/" + file[0].filename : null;
+
+      let data = JSON.parse(req.body.data);
+      data.image = filePath;
+
+      let updateQuery = `Update product set name = ${db.escape(
+        data.name
+      )}, price = ${db.escape(data.price)}, image = ${db.escape(
+        filePath
+      )}where id_product = ${req.params.id}`;
+      db.query(updateQuery, (err, result) => {
+        if (err) {
+          res.status(500).send(err);
+        }
+        res.status(200).json({
+          message: "Updated successfully",
+          result,
+        });
       });
     });
   },
   getAllProduct: (req, res) => {
-    let sqlQuery = `SELECT * FROM product`;
+    let sqlQuery = `Select p.id_product, p.name, p.price, p.image, c.nama as Kategori from product p JOIN category c on p.id_category = c.id_category`;
 
     db.query(sqlQuery, (err, results) => {
       if (err) {
